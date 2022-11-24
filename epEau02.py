@@ -10,10 +10,11 @@ def reverser(list1):
     
     lastIndex = count - 1 
 
-    for i in range(count):
+    for i in range(count - 1):
         print(sys.argv[lastIndex])
         lastIndex -= 1
     
+
 
 
 
@@ -27,3 +28,5 @@ if len(sys.argv) <= 2:
 
 
 reverser(sys.argv)
+
+#finished 
