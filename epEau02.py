@@ -13,11 +13,6 @@ def reverser(list1):
     for i in range(count - 1):
         print(sys.argv[lastIndex])
         lastIndex -= 1
-    
-
-
-
-
 
 #secure 
 
