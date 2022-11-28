@@ -1,24 +1,28 @@
 import time 
 import sys
 
-isPrime = False
-ourNumber = int(sys.argv[1])
-count = 0
+for i in range(len(sys.argv[1])):
 
-while isPrime == False:
+    if i % 2 == 0:
+        sys.argv[1][i].upper()
 
-    for i in range(1,11):
-        if int(sys.argv[1]) % i == 0:
-            count += 1
-        else: 
-            continue
+
+var1 = sys.argv[1]
+var2 = ""
+
+for i in range(len(var1)):
+    if i % 2 == 0:
+        var2 += var1[i].upper()
         
-        
-    if count == 2:
-        print("It's a prime number")
-        isPrime = True
-        exit()
-    elif count != 2:
-        ourNumber += 1
-        isPrime = False
-    
+    else:
+        var2 += var1[i]
+
+
+print(var2)
+
+
+
+
+
+
+
