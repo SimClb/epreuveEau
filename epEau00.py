@@ -1,6 +1,6 @@
 #combination of 3 numbers 
 
+name = "Simon"
+number = "000"
 
-number = int(000)
-
-print(number)
+print('%s %s' % (name, number) )
