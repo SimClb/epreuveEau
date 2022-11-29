@@ -13,7 +13,6 @@ def isNumericHomeMade(myVar):
         isNumeric = True
         return isNumeric
     except ValueError:
-        print('Error type is not numeric')
         isNumeric = False
         return isNumeric
 
