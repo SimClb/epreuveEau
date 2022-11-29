@@ -20,7 +20,7 @@ def majOn(listOfChars):
         
 
 
-# eror management
+# error management
 
 listOfArgv = sys.argv
 
@@ -32,9 +32,11 @@ if OurLib.lenCounter(listOfArgv) != 2:
 for i in listOfArgv:
     try:
         int(i)
+        print('error')
         exit()
     except ValueError:
         isNumer = False
+        
 
 ################################################################
 
