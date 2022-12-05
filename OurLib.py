@@ -71,4 +71,16 @@ def double(myList):
 
 
 
+def reverseStr(var):
+
+    N = lenCounter(var)
+    chars = ''
+
+    for i in range(N -1, -1, -1):
+        chars += str(var[i])
+
+    return chars
+
+
+
 
