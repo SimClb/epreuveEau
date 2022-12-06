@@ -10,7 +10,7 @@ import OurLib
 numbers = ''
 newList = []
 
-for i in range(0, 1000):
+for i in range(12, 790):
 
     number = f'{i:03}' # defined the width
     numbers = number # put every numbers in a char
@@ -19,18 +19,17 @@ for i in range(0, 1000):
 
 def inspector(myList):
 
-    ourIndex = 0
+    blacklist = []
 
-    #for i in myList:
-#
-    #    if OurLib.duplicatorScanner(i) == True:
-#
-    #        del myList[ourIndex]
-    #        print(f'the number {i} with index {ourIndex} has been deleted from the list')
-    #    
-    #    ourIndex += 1
-#
-    #print(myList)   
+    for i in myList:
+        if OurLib.duplicatorScanner(i):
+            blacklist.append(i) # if is True put the combination in the blacklist
+        
+    for j in blacklist:
+        myList.remove(j) # remove the truth combination of the main list (NewList)
+
+
+    print(myList)
         
 ########################################################################
 

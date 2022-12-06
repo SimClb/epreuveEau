@@ -22,14 +22,23 @@ def duplicatorScanner(var):
         counterJ = 0
             
 
-number = ['001', '107', '003']
+number = ['001', '077', '003', '123']
+
+blackList = []
 
 for g in number:
     print(g)
     if duplicatorScanner(g):
         print('ok')
-        number.remove(g)
+        blackList.append(g)
+        
     else:
         print('pas ok')
+
+
+for i in blackList: 
+
+    number.remove(i)
+
 
 print(number)
