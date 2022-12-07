@@ -1,44 +1,23 @@
-import colors
+import OurLib
 
 
-def duplicatorScanner(var):
-
-    counterI = 0
-    counterJ = 0
-
-    for i in var:
-        print(colors.bcolors.OKBLUE, counterI, "qui est l'index de:", i, colors.bcolors.ENDC)
-
-        for j in var:
-            print(colors.bcolors.OKGREEN, counterJ, "qui est l'index de:", j,  colors.bcolors.ENDC)
-            if i == j and counterI != counterJ:
-                print(f'{i} ayant pour index {counterI} est égal à {j} ayant pour index {counterJ}')
-                return True
-                
-
-            counterJ += 1
-
-        counterI += 1
-        counterJ = 0
-            
-
-number = ['001', '077', '003', '123']
-
-blackList = []
-
-for g in number:
-    print(g)
-    if duplicatorScanner(g):
-        print('ok')
-        blackList.append(g)
-        
-    else:
-        print('pas ok')
+newList = ['012', '013', '014', '021']
+blacklist = []
 
 
-for i in blackList: 
+for m in newList:
 
-    number.remove(i)
+    number = '0'
+    number += m[2]
+    number += m[1]
+
+    for i in newList:
+        if number == i and newList.index(m) < newList.index(i):
+            blacklist.append(i)
 
 
-print(number)
+for m in blacklist:
+    newList.remove(m)
+
+
+print(newList)
