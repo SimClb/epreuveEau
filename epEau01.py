@@ -23,3 +23,6 @@ def combiOfTwo(var):
 
 
 combiOfTwo(newList)
+
+
+#finished

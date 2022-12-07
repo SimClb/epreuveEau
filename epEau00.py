@@ -71,5 +71,4 @@ def inspector(myList):
 
 inspector(newList)
 
-
-
+#finished
