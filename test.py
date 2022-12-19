@@ -1,23 +1,11 @@
-import OurLib
+my_list = [1, 5, 3, 6]
 
+item = 5
+secondItem = 3
 
-newList = ['012', '013', '014', '021']
-blacklist = []
+my_list.remove(item)
 
+print(my_list.index(secondItem) + 1)
+my_list.insert((my_list.index(secondItem) + 1), item)
 
-for m in newList:
-
-    number = '0'
-    number += m[2]
-    number += m[1]
-
-    for i in newList:
-        if number == i and newList.index(m) < newList.index(i):
-            blacklist.append(i)
-
-
-for m in blacklist:
-    newList.remove(m)
-
-
-print(newList)
+print(my_list)  # 👉️ ['bobby', 'com', 'hadz', '.']
