@@ -102,5 +102,29 @@ def duplicatorScanner(var):
         counterI += 1
         counterJ = 0
             
+def isSorter(list):
+
+    members = (lenCounter(list) - 1) 
+    counter = 0
+
+    for (i, j) in zip(list, list[1:]):
+
+        if i < j:
+            counter += 1
+
+    if counter == members:
+        return True
+    else:
+        return False
+
+def finMin(varList):
+    m = int(varList[0])
+
+    for i in varList[1:]:
+
+        if i < m:
+            m = int(i)
+
+    return m 
 
 

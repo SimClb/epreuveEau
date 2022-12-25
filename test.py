@@ -1,11 +1,15 @@
-my_list = [1, 5, 3, 6]
+import OurLib
 
-item = 5
-secondItem = 3
+my_list = [6, 8, 5, 1, 3, 2, 4]
 
-my_list.remove(item)
+m = int(my_list[0])
 
-print(my_list.index(secondItem) + 1)
-my_list.insert((my_list.index(secondItem) + 1), item)
+for i in my_list[1:]:
 
-print(my_list)  # 👉️ ['bobby', 'com', 'hadz', '.']
+    if int(i) < m: 
+        m = int(i)
+
+print(m)
+
+
+print(OurLib.isSorter(my_list))
