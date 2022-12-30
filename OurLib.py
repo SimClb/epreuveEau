@@ -117,6 +117,24 @@ def isSorter(list):
     else:
         return False
 
+def isSorterASCII(list):
+
+    members = (lenCounter(list) - 1) 
+    counter = 0
+
+    for (i, j) in zip(list, list[1:]):
+
+        if ord(i[0]) < ord(j[0]):
+            counter += 1
+        elif ord(i[0]) == ord(j[0]):
+            if ord(i[1]) < ord(j[1]):
+                counter += 1
+                
+    if counter == members:
+        return True
+    else:
+        return False
+
 def finMin(varList):
     m = int(varList[0])
 
