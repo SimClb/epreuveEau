@@ -1,0 +1,1 @@
+print("j'ai fini l'épreuve de l'eau c'était middle mais en vrai trop cool de se plonger un peu dans les algo de tri et le time complexity!!")
