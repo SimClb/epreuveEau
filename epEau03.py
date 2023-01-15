@@ -19,7 +19,14 @@ def fibSequence(userSet):
         n += 1
         m += 1
 
-    print(list[m])
+    print('By while loop; ' ,list[m])
+
+def rescFibSeq(idx):
+
+    if int(idx) <= 1:
+        return idx
+    else:
+        return rescFibSeq(int(idx) - 1) + rescFibSeq(int(idx) - 2)
     
 # secure 
 
@@ -38,6 +45,7 @@ elif int(sys.argv[1]) < 0:
 
 
 fibSequence(sys.argv[1])
+print('By recursivity function; ' ,rescFibSeq(sys.argv[1]))
 
 
 #finished

@@ -145,4 +145,24 @@ def finMin(varList):
 
     return m 
 
+def bubbleSort(myList):
+
+    notDouble = []
+
+    for i in myList:
+        if i not in notDouble:
+            notDouble.append(i) # like that we are working in a simple list !
+
+    while not isSorter(notDouble):
+
+        for (i, j) in zip(notDouble, notDouble[1:]):
+            if i > j: 
+                notDouble.remove(i)
+                notDouble.insert((notDouble.index(j) + 1), i)
+            elif i < j:
+                continue
+                
+    for i in notDouble:
+        print(i, end=' ')
+
 
